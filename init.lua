@@ -53,7 +53,7 @@ minetest.register_node("invisible:light", {
         sunlight_propagates = true,
         groups = invisible.node.groups,
 	on_construct = function(pos)
-		light_level = minetest.get_node_light(pos)
+		local light_level = minetest.get_node_light(pos)
 		minetest.set_node(pos, {name="invisible:light_"..light_level})
 	end
 })
